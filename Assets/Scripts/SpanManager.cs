@@ -26,9 +26,9 @@ public class SpanManager : MonoBehaviour
     void SpawnRandomAnimal()
     {
         int animalIndex = 0;
-
+        animalIndex = Random.Range(0, animalPrefabs.Length);
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
         Instantiate(animalPrefabs[animalIndex], spawnPos, animalPrefabs[animalIndex].transform.rotation);
-        animalIndex = Random.Range(0, animalPrefabs.Length);
+       
     }
 }
